@@ -1,6 +1,10 @@
+import HeroSwiper from './components/HeroSwiper';
+
 function App() {
   return (
-    <>App</>
+    <>
+      <HeroSwiper />
+    </>
   );
 }
 
