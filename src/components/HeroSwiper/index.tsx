@@ -1,22 +1,32 @@
 import * as React from 'react';
 import * as Styled from './style';
 
+const BadgesSmallMock = [
+  {
+    backgroundColor: 'red'
+  },
+  {
+    backgroundColor: 'skyblue'
+  },
+  {
+    backgroundColor: 'pink'
+  },
+  {
+    backgroundColor: 'purple'
+  }
+];
+
 const HeroSwiper = () => {
   const [currentIndex, setCurrentIndex] = React.useState(1);
 
   return (
     <Styled.Swiper>
-      <Styled.BadgeSmall activeIndex={currentIndex}>
-        <i>1</i>
-        <i>2</i>
-        <i>3</i>
-        <i>4</i>
-        <i>5</i>
-        <i>6</i>
-        <i>7</i>
-        <i>8</i>
-        <i>9</i>
-      </Styled.BadgeSmall>
+      <Styled.BadgeSmallWrap>
+        {BadgesSmallMock.map((value, index) => (
+          <Styled.BadgeSmall activeIndex={currentIndex} backgroundColor={value.backgroundColor} key={index} />
+        ))}
+      </Styled.BadgeSmallWrap>
+      <Styled.ButtonTest onClick={() => setCurrentIndex(currentIndex + 1)}>+</Styled.ButtonTest>
     </Styled.Swiper>
   );
 };
