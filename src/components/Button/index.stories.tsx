@@ -6,7 +6,8 @@ export default {
   title: '컴포넌트/버튼',
   components: Button,
   args: {
-    label: '버튼'
+    label: '버튼',
+    onClick: () => console.log('clicked')
   }
 } as Meta;
 
