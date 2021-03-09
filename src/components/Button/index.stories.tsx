@@ -6,7 +6,7 @@ export default {
   title: '컴포넌트/버튼',
   components: Button,
   args: {
-    children: '버튼'
+    label: '버튼'
   }
 } as Meta;
 

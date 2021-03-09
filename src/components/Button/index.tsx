@@ -1,13 +1,13 @@
 import './style.scss';
 
 export interface ButtonProps {
-  children: React.ReactNode;
+  label: string;
 }
 
-const Button = ({ children }: ButtonProps) => {
+const Button = ({ label }: ButtonProps) => {
   return (
     <button className="Button" type="button">
-      {children}
+      {label}
     </button>
   );
 };
